@@ -1,0 +1,115 @@
+<h3>Comparisons</h3>
+
+<h4>Comparison Operators</h4>
+<p>
+	Comparison operators are used in logical statements to determine equality or difference
+	between variables or values.<br>
+	If your variable <strong>x=5</strong>, the table below explains the comparison operators.
+</p>
+<table>
+	<tr>
+		<th>Operator</th>
+		<th>Description</th>
+		<th>Example</th>
+		<th>Result</th>
+	</tr>
+	<tr>
+		<td>==</td>
+		<td>is equal to</td>
+		<td>x == 8</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<td rowspan="2">===</td>
+		<td rowspan="2">is exactly equal to</td>
+		<td>x === 5</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>x === "5"</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<td>!=</td>
+		<td>is not equal to</td>
+		<td>x != 8</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>&gt;</td>
+		<td>is greater than</td>
+		<td>x &gt; 8</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<td>&lt;</td>
+		<td>is less than</td>
+		<td>x &lt; 8</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>&gt;=</td>
+		<td>is greater than or equal to</td>
+		<td>x &gt;= 8</td>
+		<td>false</td>
+	</tr>
+	<tr>
+		<td>&lt;=</td>
+		<td>is less than or equal to</td>
+		<td>x &lt;= 8</td>
+		<td>true</td>
+	</tr>
+</table>
+
+<h4>Logical Operators</h4>
+<p>
+	Logical operators are used to determine the logic between variables and/or their values and/or conditions.<br>
+	If your variable <strong>x=5</strong> and <strong>y=10</strong>, the table below explains the logical operators.
+</p>
+<table>
+	<tr>
+		<th>Operator</th>
+		<th>Description</th>
+		<th>Example</th>
+		<th>Result</th>
+	</tr>
+	<tr>
+		<td>&amp;&amp;</td>
+		<td>and</td>
+		<td>(x &lt; 10 && y &gt; 9)</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>||</td>
+		<td>or</td>
+		<td>(x == 10 || y == 10)</td>
+		<td>true</td>
+	</tr>
+	<tr>
+		<td>!</td>
+		<td>not (negotiation)</td>
+		<td>!(x == 10)</td>
+		<td>true</td>
+	</tr>
+</table>
+
+<h4>Logical operator usages</h4>
+<p>
+	You can use the logical operators in statements or conditions. Have
+	a look at the code below and look at the variable values.
+</p>
+<pre class="javascript-code">
+var x = {}, y = undefined, z = '';
+
+if(!!x === true){
+	// double negotiation will force a boolean
+}
+
+if(!y){
+	// it will also avoid exceptions with undefined variables
+}
+
+if(!z){
+	// ...empty strings are treated as false
+}
+</pre>

@@ -1,0 +1,68 @@
+<h3>Variables</h3>
+<h4>Do you remember Algebra from school?</h4>
+<p>
+	Do you remember Algebra from school?<br>
+	In Algebra, you were able to assign a value to a letter. The letter
+	was a representation of that value... and it's value could be modified
+	through addition, substraction or other mathematic functions.
+</p>
+<pre class="javascript-code">
+var x = 5;
+var y = 4;
+
+alert(x + y); // will alert 9
+
+y++; // increase the value of variable y by one
+alert(x + y); // will alert 10
+</pre>
+
+
+
+<h4>Declaring Variables</h4>
+<p>
+	In programming languages, the process of creating a variable is called <q>declaring a variable</q>.
+	You can declare variables in JavaScript using the <strong>var</strong> keyword.
+</p>
+<pre class="javascript-code">
+var x; // declaring a variable
+var y = 5; // declaring a variable and assigning a value to it
+</pre>
+
+
+
+<h4>Local Variables</h4>
+<p>
+	A variable declared within a function becomes a <strong>local</strong> variable and can only be
+	accessed within that function. The variable has a local scope.
+</p>
+<p>
+	You can have multiple local variables with the same variable name in different functions, because
+	local variables are only recognized by the function in which they are declared.
+</p>
+<h4>Global Variables</h4>
+<p>
+	Variables declared outside a function (scope) becomes <strong>global</strong> and all scripts and
+	functions on the web page can access it.
+</p>
+<p>
+	A variable declared without the <strong>var</strong> keyword will become a global variable by default.
+</p>
+<pre class="javascript-code">
+function myFunc1(){
+	var myVar = 3; // local variable
+	alert(myVar); // 3
+
+	myVar2 = 5; // global variable
+}
+myFunc1(); // calling first function
+
+function myFunc2(){
+	alert(myVar); // undefined
+
+	var myVar = 4; // declare local variable
+	alert(myVar); // 4
+
+	alert(myVar2); // 5
+}
+myFunc2(); // calling second function
+</pre>

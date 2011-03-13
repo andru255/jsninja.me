@@ -1,0 +1,54 @@
+body{
+	margin:0;
+	padding:0;
+	background:#e6e7e8;
+	font-size:14px;
+}
+#navigation{
+	display:block;
+	position:absolute;
+	width:160px;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	color:white;
+	background:#d3392f; /* @todo: gradient! */
+	background:#701f1b;
+	padding:3px 10px;
+	border:1px solid darkgrey;
+	-moz-border-radius:0 20px 20px 0;
+	z-index:2;
+}
+
+#navigation h1{
+	text-align:center;
+}
+#navigation ul{
+	margin:0;
+	padding:0;
+}
+#navigation li{
+	list-style-position:inside;
+}
+#navigation a{
+	color:white;
+	text-decoration:none;
+}
+
+#content{
+	position:relative;
+	left:200px;
+	padding:5px 10px;
+	color:#666757;
+	color:#c33344;
+	z-index:1;
+}
+
+h1{
+	font-size:18px;
+	line-height:18px;
+}
+h2{
+	font-size:16px;
+	line-height:16px;
+}
