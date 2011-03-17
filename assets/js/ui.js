@@ -99,13 +99,13 @@ jsninjaMe.ui.prototype = {
 			_lightboxes = document.getElementsByClassName('ui-lightbox'),
 			_target = document.getElementById(this.query[0]);
 
-		if(_sections){
+		if(_sections && _target){
 			for(var s=0; s<_sections.length; s++){
 				_sections[s].className = _sections[s].className.replace(/\sactive/,'');
 			}
 		}
 
-		if(_lightboxes){
+		if(_lightboxes && _target){
 			for(var l=0; l<_lightboxes.length; l++){
 				_lightboxes[l].className = _lightboxes[l].className.replace(/\sactive/,'');
 			}
