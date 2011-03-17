@@ -40,13 +40,22 @@ a{
 	margin:30px 20px;
 }
 .ui-badge:nth-child(odd){
+	transform:rotate(5deg);
+	-moz-transform:rotate(5deg);
+	-ms-transform:rotate(5deg);
 	-webkit-transform:rotate(5deg);
 }
 .ui-badge:nth-child(even){
+	transform:rotate(-5deg);
+	-moz-transform:rotate(-5deg);
+	-ms-transform:rotate(-5deg);
 	-webkit-transform:rotate(-5deg);
 }
 .ui-badge:hover, .ui-badge:focus{
 	background:#ccaa99;
+	transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
 	-webkit-transform:rotate(0deg);
 }
 
