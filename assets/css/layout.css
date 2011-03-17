@@ -1,54 +1,51 @@
 body{
 	margin:0;
 	padding:0;
-	background:#e6e7e8;
-	font-size:14px;
-}
-#navigation{
-	display:block;
-	position:absolute;
-	width:160px;
-	top:0px;
-	bottom:0px;
-	left:0px;
-	color:white;
-	background:#d3392f; /* @todo: gradient! */
-	background:#701f1b;
-	padding:3px 10px;
-	border:1px solid darkgrey;
-	-moz-border-radius:0 20px 20px 0;
-	z-index:2;
+	background:#ddd;
+	overflow:hidden;
+	font-family:Arial;
 }
 
-#navigation h1{
-	text-align:center;
-}
-#navigation ul{
-	margin:0;
-	padding:0;
-}
-#navigation li{
-	list-style-position:inside;
-}
-#navigation a{
-	color:white;
+a{
+	color:#cc3300;
+	font-weight:bold;
 	text-decoration:none;
 }
 
-#content{
+/* UI / Welcome-Lightbox */
+#ui-welcome>article{
 	position:relative;
-	left:200px;
-	padding:5px 10px;
-	color:#666757;
-	color:#c33344;
-	z-index:1;
+	width:800px;
+	margin:10% auto;
+	top:auto;
+	right:auto;
+	bottom:auto;
+	left:auto;
 }
 
-h1{
-	font-size:18px;
-	line-height:18px;
+#ui-welcome h2{
+	margin:0;
+	padding:0;
 }
-h2{
-	font-size:16px;
-	line-height:16px;
+#ui-welcome p{
+	margin:0.25em 0;
+}
+
+#ui-welcome .ui-badge-container{
+	display:block;
+	text-align:center;
+}
+#ui-welcome .ui-badge{
+	display:inline-block;
+	margin:30px 20px;
+}
+.ui-badge:nth-child(odd){
+	-webkit-transform:rotate(5deg);
+}
+.ui-badge:nth-child(even){
+	-webkit-transform:rotate(-5deg);
+}
+.ui-badge:hover, .ui-badge:focus{
+	background:#ccaa99;
+	-webkit-transform:rotate(0deg);
 }

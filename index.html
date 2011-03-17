@@ -2,20 +2,82 @@
 <html>
 <head>
 	<title>JSninja.me | Professional JavaScript Development and Tutorials</title>
+	<link rel="stylesheet" href="assets/css/ui.css">
 	<link rel="stylesheet" href="assets/css/layout.css">
+	<script src="assets/js/ui.js"></script>
 </head>
 <body>
 
-<div id="navigation">
-	<h1>Navigation</h1>
-	<ul id="navigation-links">
-		<li><a href="dojo.html" title="become a JavaScript ninja and learn to develop">Dojo</a></li>
-		<li><a href="forums.html" title="discuss with other JavaScript ninjas">Forums</a></li>
-	</ul>
+<div class="ui-lightbox active" id="ui-welcome">
+	<article>
+		<h2>Welcome to jsninja.me</h2>
+		<p>
+			This site is all about JavaScript, HTML5, CSS3 and modern web development.
+		</p>
+		<p>
+			The targeted audience are <strong>professional</strong> web developers, but
+			there are many Tutorials showing you how to get into the Ninja-style of coding.
+		</p>
+		<div class="ui-badge-container">
+			<a class="ui-badge" href="#dojo" tabindex="1">
+				<h3>JavaScript Dojo</h3>
+				<span>Learn JavaScript</span>
+			</a>
+			<a class="ui-badge" href="#forums" tabindex="2">
+				<h3>Forums</h3>
+				<span>Talk JavaScript</span>
+			</a>
+			<a class="ui-badge" href="#bushido" tabindex="3">
+				<h3>Bushido</h3>
+				<span>Spread JavaScript</span>
+			</a>
+		</div>
+		<div id="javascript-notification" class="ui-notification">
+			Don't have JavaScript? What are you doing here?<br>
+			Wanna see the plain <a href="dojo.html">HTML version of the dojo</a>?
+		</div>
+	</article>
 </div>
 
-<div id="content">
-	<h1 class="hidden">Content</h1>
+
+<div class="ui-section" id="dojo">
+	<div class="ui-sidebar">
+		<a class="ui-button" href="#!ui-welcome">show welcome dialog</a>
+		<div class="ui-sidebar-menu">
+			<strong>Introduction</strong>
+			<ul>
+				<li><a href="#!dojo/introduction">Introduction</a></li>
+				<li><a href="#!dojo/introduction/setup">Setup your environment</a></li>
+			</ul>
+		</div>
+
+		<div class="ui-sidebar-menu">
+			<strong>Basics</strong>
+			<ul>
+				<li><a href="#!dojo/basics/01-what-is-javascript">What is JavaScript?</a></li>
+				<li><a href="#!dojo/basics/02-variables">Variables</a></li>
+				<li><a href="#!dojo/basics/03-operators">Operators</a></li>
+				<li><a href="#!dojo/basics/04-data-types">Data Types</a></li>
+				<li><a href="#!dojo/basics/05-comparisons">Comparisons</a></li>
+				<li><a href="#!dojo/basics/06-statements">Statements</a></li>
+				<li><a href="#!dojo/basics/07-functions">Functions</a></li>
+				<li><a href="#!dojo/basics/08-prototype">Prototype</a></li>
+				<li><a href="#!dojo/basics/09-scopes">Scopes</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="dojo-content" class="ui-content">
+		<h2>The JavaScript Dojo</h2>
+		<p>For now this UI Prototype is just a dummy.</p>
+		<p>
+			It isn't finished...but you are pleased to contribute to this OpenSource project on GitHub at <a href="http://github.com/martensms/jsninja.me">http://github.com/martensms/jsninja.me</a>
+		</p>
+	</div>
 </div>
+<script>
+var uiNameSpace = new jsninjaMe.ui({
+	hash: window.location.hash
+});
+</script>
 </body>
 </html>
