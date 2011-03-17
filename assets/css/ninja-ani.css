@@ -1,0 +1,49 @@
+.ninja-arm-right[data-ani='wave']{
+	-webkit-animation:'wave-right-arm' 0.8s infinite ease-out;
+}
+@-webkit-keyframes wave-right-arm{
+	0%,100%{ -webkit-transform:rotate(45deg); }
+	50%{ top:80px; -webkit-transform:rotate(-20deg); }
+}
+
+.ninja-arm-left[data-ani='wave']{
+	-webkit-animation:'wave-left-arm' 0.8s infinite ease-out;
+}
+@-webkit-keyframes wave-left-arm{
+	0%,100%{ -webkit-transform:rotate(-45deg); }
+	50%{ top:80px; -webkit-transform:rotate(20deg); }
+}
+
+
+
+.ninja[data-ani='walk'] .ninja-arm-right{
+	-webkit-animation:'walk-right-arm' 2s infinite ease;
+}
+@-webkit-keyframes walk-right-arm{
+	0%,100%{ -webkit-transform:rotate(60deg) translate(5px,10px); }
+	50%{ -webkit-transform:rotate(45deg); }
+}
+
+.ninja[data-ani='walk'] .ninja-arm-left{
+	-webkit-animation:'walk-left-arm' 2s infinite ease;
+}
+@-webkit-keyframes walk-left-arm{
+	0%,100%{ -webkit-transform:rotate(-45deg); }
+	50%{ -webkit-transform:rotate(-60deg) translate(-5px,10px); }
+}
+
+.ninja[data-ani='walk'] .ninja-leg-right{
+	-webkit-animation:'walk-right-leg' 2s infinite ease-out;
+}
+@-webkit-keyframes walk-right-leg{
+	0%,100%{ -webkit-transform:scale(1,0.9); }
+	50%{ -webkit-transform:scale(1,1.2); }
+}
+
+.ninja[data-ani='walk'] .ninja-leg-left{
+	-webkit-animation:'walk-left-leg' 2s infinite ease-out;
+}
+@-webkit-keyframes walk-left-leg{
+	0%,100%{ -webkit-transform:scale(1,1.2); }
+	50%{ -webkit-transform:scale(1,0.9); }
+}

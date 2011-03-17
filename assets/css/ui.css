@@ -86,6 +86,38 @@ a.ui-badge{
 
 
 
+/* UI / Speechbubble */
+.ui-speechbubble{
+	position:relative;
+	top:auto;
+	right:auto;
+	bottom:auto;
+	left:auto;
+	padding:15px;
+	width:auto;
+	height:auto;
+	border:2px solid #404040;
+	background:white;
+	border-radius:15px;
+	text-align:left;
+}
+.ui-speechbubble:after{
+	position:absolute;
+	display:block;
+	content:"";
+	width:0;
+	height:0;
+	top:auto;
+	right:-20px;
+	bottom:15px;
+	left:auto;
+	border-width:10px 0 10px 20px;
+	border-color:transparent #404040;
+	border-style:solid;
+}
+
+
+
 /* UI / Button */
 .ui-button{
 	color:#555;
@@ -117,11 +149,11 @@ a.ui-badge{
 	border-right:2px solid #663300;
 	border-bottom:2px solid #663300;
 	border-radius:0 0 30px 0;
-	-webkit-transform:rotate(-45deg) translate3d(-200%,0,0);
+	-webkit-transform:rotate(-45deg) translate(-200%,0);
 	-webkit-transition:-webkit-transform 750ms ease-out;
 }
 .ui-section:target .ui-sidebar, .ui-section.active .ui-sidebar{
-	-webkit-transform:rotate(0deg) translate3d(0,0,0);
+	-webkit-transform:rotate(0deg) translate(0,0);
 }
 .ui-section .ui-content{
 	position:absolute;
@@ -133,13 +165,13 @@ a.ui-badge{
 	overflow:auto;
 	background:#fff;
 	border:2px solid #888;
-	-webkit-transform:rotate(90deg) translate3d(200%,100%,0);
+	-webkit-transform:rotate(90deg) translate(200%,100%);
 	-webkit-transition:-webkit-transform 750ms ease-out;
 }
 .ui-section:target .ui-content, .ui-section.active .ui-content{
 	border-top:0 none;
 	border-bottom:0 none;
-	-webkit-transform:rotate(0deg) translate3d(0,0,0);
+	-webkit-transform:rotate(0deg) translate(0,0);
 }
 .ui-sidebar-menu{
 	margin:2em 0;

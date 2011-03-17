@@ -49,3 +49,21 @@ a{
 	background:#ccaa99;
 	-webkit-transform:rotate(0deg);
 }
+
+
+
+
+#ninja{
+	position:fixed;
+	right:20px;
+	bottom:0px; /* 10px to the bottom is left, because of walking animation */
+	z-index:1002;
+}
+
+#ninja-speechbubble{
+	position:fixed;
+	bottom:80px;
+	right:210px;
+	z-index:1003;
+}
+

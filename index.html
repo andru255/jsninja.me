@@ -3,6 +3,8 @@
 <head>
 	<title>JSninja.me | Professional JavaScript Development and Tutorials</title>
 	<link rel="stylesheet" href="assets/css/ui.css">
+	<link rel="stylesheet" href="assets/css/ninja.css">
+	<link rel="stylesheet" href="assets/css/ninja-ani.css">
 	<link rel="stylesheet" href="assets/css/layout.css">
 	<script src="assets/js/ui.js"></script>
 </head>
@@ -32,12 +34,34 @@
 				<span>Spread JavaScript</span>
 			</a>
 		</div>
+
 		<div id="javascript-notification" class="ui-notification">
 			Don't have JavaScript? What are you doing here?<br>
 			Wanna see the plain <a href="dojo.html">HTML version of the dojo</a>?
 		</div>
 	</article>
+
 </div>
+
+<div id="ninja-speechbubble" class="ui-speechbubble">Welcome!</div> 
+<!-- begin ninja -->
+<div class="ninja happy" id="ninja">
+	<div class="ninja-head">
+		<div class="ninja-face">
+			<div class="ninja-eye-left"></div>
+			<div class="ninja-eye-right"></div>
+		</div>
+	</div>
+	<div class="ninja-body">
+		<div class="ninja-leg-left"></div>
+		<div class="ninja-leg-right"></div>
+	</div>
+
+	<!-- need to be outside due to browser bugs with the weapon / item -->
+	<div class="ninja-arm-left" data-ani="wave"></div>
+	<div class="ninja-arm-right"></div>
+</div>
+<!-- end ninja -->
 
 
 <div class="ui-section" id="dojo">
