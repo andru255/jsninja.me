@@ -105,6 +105,8 @@
 .ninja-leg-right, .ninja-leg-left{
 	background:#1d1d1e;
 	border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
 	border:5px solid #000;
 	z-index:21;
 }

@@ -36,6 +36,8 @@
 	background:#fff;
 	border:1px solid #BCC1D0;
 	border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
 }
 
 
@@ -47,7 +49,8 @@
 	background:#ffaa99;
 	border:2px solid #ff3300;
 	border-radius:8px;
-	-webkit-transition:all 250ms ease-out;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
 }
 
 
@@ -60,6 +63,8 @@
 	background:#aa8866;
 	border:2px solid #663300;
 	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
 	transition:all 250ms ease-out;
 	-moz-transition:all 250ms ease-out;
 	-webkit-transition:all 250ms ease-out;
@@ -101,6 +106,8 @@ a.ui-badge{
 	border:2px solid #404040;
 	background:white;
 	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
 	text-align:left;
 }
 .ui-speechbubble:after{
@@ -127,6 +134,8 @@ a.ui-badge{
 	padding:3px 10px;
 	border:1px solid #888;
 	border-radius:8px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
 	font-size:14px;
 	font-weight:normal;
 	cursor:pointer;
@@ -151,6 +160,8 @@ a.ui-badge{
 	border-right:2px solid #663300;
 	border-bottom:2px solid #663300;
 	border-radius:0 0 30px 0;
+	-moz-border-radius:0 0 30px 0;
+	-webkit-border-radius:0 0 30px 0;
 	transform:rotate(-45deg) translate(-200%,0);
 	transition:transform 750ms ease-out;
 	-moz-transform:rotate(-45deg) translate(-200%,0);
@@ -210,4 +221,6 @@ a.ui-badge{
 	color:#663300;
 	background:#f0ddd0;
 	border-radius:0 10px 10px 0;
+	-moz-border-radius:0 10px 10px 0;
+	-webkit-border-radius:0 10px 10px 0;
 }
