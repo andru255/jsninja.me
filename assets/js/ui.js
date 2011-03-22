@@ -79,6 +79,14 @@ jsninjaMe.ui.prototype = {
 			if(data && data.length){
 				var element = document.getElementById(query[0]+'-content');
 				element.innerHTML = data;
+
+				var tables = document.getElementsByTagName('table');
+				for(var t=0; t<tables.length; t++){
+					if(tables[t].parentNode.className.match(/ui-content/)){
+						tables[t].setAttribute('cellpadding', '0');
+						tables[t].setAttribute('cellspacing', '3');
+					}
+				}
 			};
 		});
 
