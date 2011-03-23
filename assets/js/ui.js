@@ -6,6 +6,9 @@ jsninjaMe.ui = function(settings){
 		hash: ((settings.hash && settings.hash.match(/!/)) ? settings.hash.split(/!/)[1] : 'ui-welcome')
 	};
 
+	// initial load
+	this.load();
+
 	this._init();
 };
 
@@ -45,7 +48,7 @@ jsninjaMe.ui.prototype = {
 			elements[e].onclick = function(){
 				if(this.href.match(/!/)){
 					// self.load(this.href.split(/!/)[1]);
-					window.location.hash = this.href.split(/!/)[1];
+					window.location.hash = '!'+this.href.split(/!/)[1];
 					return false;
 				}else if(this.href.match(/#/)){
 					// self.load(this.href.split(/#/)[1]);
@@ -107,8 +110,8 @@ jsninjaMe.ui.prototype = {
 		url = url || this.settings.hash;
 
 		// allow calling with #...
-		if(url.match(/#/)){
-			url = url.split(/#/)[1];
+		if(url.match(/!/)){
+			url = url.split(/!/)[1];
 		}
 
 		this.query = url.split(/\//);
