@@ -17,11 +17,13 @@
 	<article>
 		<h2>Welcome to jsninja.me</h2>
 		<p>
-			This site is all about JavaScript, HTML5, CSS3 and modern web development.
+			This site is an OpenSource documentation project of the JavaScript language.
+			It will try to offer professional step-by-step tutorials to get you a Ninja in HTML5, CSS3 and JavaScript.
 		</p>
+		<br>
 		<p>
-			The targeted audience are <strong>professional</strong> web developers, but
-			there are many Tutorials showing you how to get into the Ninja-style of coding.
+			The targeted audiences are <strong>professional</strong> web developers.<br>
+			<small>That might explain why you will have to provide some information about yourself when joining the forums.</small>
 		</p>
 		<div class="ui-badge-container">
 			<a class="ui-badge" href="#!dojo" tabindex="1">
@@ -47,8 +49,9 @@
 </div>
 
 <div class="ui-section" id="dojo">
-	<div class="ui-sidebar">
-		<a class="ui-button" href="#!ui-welcome">show welcome dialog</a>
+	<div id="dojo-sidebar" class="ui-sidebar">
+		<a class="ui-button" href="#!ui-welcome">welcome dialog</a>
+		<a id="print-button" class="ui-button noload" href="#">print</a>
 		<div class="ui-sidebar-menu">
 			<strong>Introduction</strong>
 			<ul>
@@ -98,6 +101,12 @@ ninja.start('wave', 'arm-left').say('Welcome, dude!\nClick me for help.');
 
 var wizard = new jsninjaMe.wizard();
 wizard.init(0);
+
+// will print everything
+document.getElementById('print-button').addEventListener('click', function(){
+	ui.print();
+	return false;
+});
 
 //ui.bind('#ninja', 'click', function(event){
 //	wizard.start();

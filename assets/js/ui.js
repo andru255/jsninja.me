@@ -45,17 +45,19 @@ jsninjaMe.ui.prototype = {
 			self = this;
 
 		for(var e=0; e<elements.length; e++){
-			elements[e].onclick = function(){
-				if(this.href.match(/!/)){
-					// self.load(this.href.split(/!/)[1]);
-					window.location.hash = '!'+this.href.split(/!/)[1];
-					return false;
-				}else if(this.href.match(/#/)){
-					// self.load(this.href.split(/#/)[1]);
-					window.location.hash = this.href.split(/#/)[1];
-					return false;
-				}
-			};
+			if(!elements[e].className.match(/noload/)){
+				elements[e].onclick = function(){
+					if(this.href.match(/!/)){
+						// self.load(this.href.split(/!/)[1]);
+						window.location.hash = '!'+this.href.split(/!/)[1];
+						return false;
+					}else if(this.href.match(/#/)){
+						// self.load(this.href.split(/#/)[1]);
+						window.location.hash = this.href.split(/#/)[1];
+						return false;
+					}
+				};
+			}
 		}
 
 	},
@@ -159,6 +161,24 @@ jsninjaMe.ui.prototype = {
 					elements[e].addEventListener(event, callback, true);
 				}
 			}
+		}
+
+	},
+
+	print: function(section){
+
+		if(!section){
+			var elements = document.getElementById('dojo-sidebar').getElementsByTagName('a');
+
+			for(var e=0; e<elements.length; e++){
+				if(!elements[e].className.match(/ui-button/)){
+					var url = elements[e].getAttribute('href').split(/!/)[1];
+
+					console.log(url);
+
+				}
+			}
+
 		}
 
 	}
