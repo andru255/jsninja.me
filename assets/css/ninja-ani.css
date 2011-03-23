@@ -1,5 +1,11 @@
 .ninja-arm-right[data-ani='wave']{
-	-webkit-animation:'wave-right-arm' 0.8s infinite ease-out;
+	/*
+	-webkit-animation-name:'wave-right-arm';
+	-webkit-animation-duration:800ms;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease;
+	*/
+	-webkit-animation:'wave-right-arm' 800ms infinite ease-out;
 }
 @-webkit-keyframes wave-right-arm{
 	0%,100%{ -webkit-transform:rotate(45deg); }
@@ -7,7 +13,7 @@
 }
 
 .ninja-arm-left[data-ani='wave']{
-	-webkit-animation:'wave-left-arm' 0.8s infinite ease-out;
+	-webkit-animation:'wave-left-arm' 800ms infinite ease-out;
 }
 @-webkit-keyframes wave-left-arm{
 	0%,100%{ -webkit-transform:rotate(-45deg); }

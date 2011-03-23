@@ -1,4 +1,4 @@
-var jsninjaMe = {};
+if(!window.jsninjaMe){ window.jsninjaMe = {}; }
 
 jsninjaMe.ui = function(settings){
 
@@ -15,8 +15,16 @@ jsninjaMe.ui.prototype = {
 
 		if(!this.settings.hash) return false;
 
-		var loaded = this.load(this.settings.hash);
+		// first bin the location hash functionality
+		// why onhashchange? because even IE8 supports it, dude =)
+		var self = this;
+		window.onhashchange = function(){
+			self.load(window.location.hash);
+		};
 
+
+		// initial load
+		var loaded = self.load(this.settings.hash);
 		if(loaded){
 			var notification = document.getElementById('javascript-notification');
 			if(notification && notification.parentNode){
@@ -36,10 +44,12 @@ jsninjaMe.ui.prototype = {
 		for(var e=0; e<elements.length; e++){
 			elements[e].onclick = function(){
 				if(this.href.match(/!/)){
-					self.load(this.href.split(/!/)[1]);
+					// self.load(this.href.split(/!/)[1]);
+					window.location.hash = this.href.split(/!/)[1];
 					return false;
 				}else if(this.href.match(/#/)){
-					self.load(this.href.split(/#/)[1]);
+					// self.load(this.href.split(/#/)[1]);
+					window.location.hash = this.href.split(/#/)[1];
 					return false;
 				}
 			};
@@ -96,9 +106,9 @@ jsninjaMe.ui.prototype = {
 
 		url = url || this.settings.hash;
 
-		// update the URL for direct / deep linking
-		if('#'+url != window.location.hash){
-			window.location.hash = '!'+url;
+		// allow calling with #...
+		if(url.match(/#/)){
+			url = url.split(/#/)[1];
 		}
 
 		this.query = url.split(/\//);
@@ -132,6 +142,22 @@ jsninjaMe.ui.prototype = {
 		// everything went fine...should be okay
 		return true;
 
+	},
+
+	bind: function(selector, event, callback){
+
+		var elements = document.querySelectorAll(selector);
+
+		if(elements.length && callback){
+			for(var e=0; e<elements.length; e++){
+				if(event.match(/on/)){
+					elements[e][event] = callback;
+				}else{
+					elements[e].addEventListener(event, callback, true);
+				}
+			}
+		}
+
 	}
 
-}
+};
