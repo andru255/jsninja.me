@@ -56,10 +56,10 @@
 
 
 /* UI / Badge */
-.ui-badge{
+.ui-badge, .ui-content .ui-badge{
 	width:180px;
 	padding:10px;
-	color:#663300;
+	color:#fff;
 	background:#aa8866;
 	border:2px solid #663300;
 	border-radius:8px;
@@ -73,12 +73,8 @@ a.ui-badge{
 	text-decoration:none;
 	outline:none;
 }
-.ui-badge:hover *{
-	color:#222;
-}
-.ui-badge h3{
+.ui-badge h3, .ui-content .ui-badge h3{
 	display:block;
-	text-align:center;
 	font-size:18px;
 	margin:0 0 4px 0;
 	padding:0;
@@ -86,7 +82,6 @@ a.ui-badge{
 }
 .ui-badge span{
 	display:block;
-	text-align:center;
 	font-size:16px;
 	color:#ddd;
 }

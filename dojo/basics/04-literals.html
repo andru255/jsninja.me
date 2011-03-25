@@ -1,0 +1,209 @@
+<h3>Data Types, Objects and Literals</h3>
+<p>
+	In JavaScript every data type is represented as an object with different properties.
+</p>
+<p>
+	But you can use literals and primitive data types to represent values.<br>
+	These are fixed values, not variables - that you literally provide in your script.
+</p>
+
+<h4>The different data types are:</h4>
+<ul>
+	<li>Array</li>
+	<li>Boolean</li>
+	<li>Floating-Point</li>
+	<li><h1>MISSING:</h1>Integers</li>
+	<li><h1>MISSING:</h1>Object</li>
+	<li><h1>MISSING:</h1>String</li>
+</ul>
+
+
+
+<h3>Array Literals</h3>
+<p>
+	An array literal exists of at least zero (or more) expressions that represent the array elements. They are enclosed in square brackets (<strong>[]</strong>).<br>
+	When you create an array using an array literal, it is initialized with the specified values as its elements and its length is set to the number of arguments specified.
+</p>
+<pre class="javascript-code">
+var name = [ 'Christoph', 'Martens' ];
+
+alert(name[0]); // "Christoph"
+alert(name[1]); // "Martens"
+alert(name.length); // 2
+</pre>
+
+<h4>Initializing Arrays with undefined elements</h4>
+<p>
+	You can add extra commas between defined elements to add an extra element to the array, <strong>which has an undefined value</strong>.
+</p>
+<pre class="javascript-code">
+var name = [ 'Christoph', , 'Martens' ]; // no mistake. see below.
+
+alert(name[0]); // "Christoph"
+alert(name[1]); // undefined
+alert(name[2]); // "Martens"
+alert(name.length); // 3
+</pre>
+
+<h4>Trailing commas</h4>
+<p>
+	<strong>Trailing commas at the end of the list of elements are ignored</strong>, see the below examples for details.
+</p>
+<pre class="javascript-code">var name = [ 'Christoph', , 'Martens', ];</pre>
+<p>... will have no name[3] set.</p>
+
+<h4>Multiple trailing commas</h4>
+<div class="ui-badge ui-warning"><h3>Attention</h3><span>Here's a different behaviour in WebKit and Gecko</span></div>
+<pre class="javascript-code">var name = [ 'Christoph', , 'Martens', , ];</pre>
+<p>
+	<strong>WebKit behaviour</strong><br>
+	The array will have no name[3] and no name[4], all trailing commas are ignored.
+</p>
+<p>
+	<strong>Gecko behaviour</strong><br>
+	The array will have name[3] as undefined and no name[4].
+</p>
+
+
+
+<h3>Boolean Object</h3>
+<p>
+	The Boolean Object is a wrapper around the primitive Boolean data type.<br>
+	It accepts the values <strong>true</strong> and <strong>false</strong>
+</p>
+<p>
+	Keep in mind that this wrapper will create an object and not a value.
+</p>
+<pre class="javascript-code">
+var result = new Boolean(value);
+alert(typeof result); // "object"
+</pre>
+
+
+<h3>Boolean Literals</h3>
+<p>
+	The boolean type has two literal values: <strong>true</strong> and <strong>false</strong>
+</p>
+<pre class="javascript-code">
+var result = true;
+alert(typeof result); // "boolean"
+</pre>
+
+<div class="ui-badge ui-warning"><h3>Important</h3><span>Do not confuse the primitive Boolean (literal) values with the values of the Boolean Object!</span></div>
+<p>
+	The following example will show the difference between the primitive Boolean values and the Boolean Object values.
+</p>
+<pre class="javascript-code">
+var result1 = new Boolean(false); // Boolean object value
+if(result1){
+	// this part will be executed!
+	alert(typeof result1);
+	alert(result1);
+}
+
+var result2 = false; // primitive Boolean literal
+if(result2){
+	// this part will NOT be executed!
+	alert(typeof result2);
+	alert(result2);
+}
+</pre>
+<strong>Explanation:</strong>
+<p>
+	Any value that is not undefined, null, 0, NaN, or the empty string (""), and any object, including a Boolean object whose value is false, evaluates to true when passed to a conditional statement.
+</p>
+
+
+
+<h3>Floating-Point Literals</h3>
+<p>A floating-point literal can match the following parts:</p>
+<ul>
+	<li>decimal integer which can be signed (+ / -)</li>
+	<li>decimal point</li>
+	<li>fraction (another decimal integer)</li>
+	<li>exponent</li>
+</ul>
+<p>
+	The exponent part is an <strong>e</strong> or <strong>E</strong> followed by an integer, which can also be signed.
+	A floating-point literal must have at least one digit and either a decimal point or <strong>e</strong> (well, or <strong>E</strong>).
+	Here are some floating-point literals examples:
+</p>
+<pre class="javascript-code">
+var eg1 =  3.123;
+var eg2 = -3.321;
+var eg3 = -3.1E9;
+var eg4 =   .1e2;
+var eg5 = 2E-12;
+</pre>
+
+
+
+<h3>String Literals</h3>
+<p>
+	String literals are enclosed in double (") or single (') quotation marks. A string literal itself can also have zero characters.
+	A string must be delimited by the quotation mark of the same type. That means you will have to start and end with double quotation marks or you will have to start and end with single quotation marks.
+</p>
+<pre class="javascript-code">
+var eg1 = "Foo";
+var eg2 = 'Bar';
+var eg3 = "1234";
+var eg4 = "First line \n Second line";
+var eg5 = "Foo's Bar";
+</pre>
+<p>
+	As you already know, the String literal is a representation of the native String object. The String object also offers a property called length.
+</p>
+<pre class="javascript-code">
+alert("This is a string".length); // 16
+</pre>
+
+<h4>Special Characters in Strings</h4>
+<table>
+	<tr>
+		<th>Character</th>
+		<th>Meaning</th>
+	</tr>
+	<tr>
+		<td>\b</td>
+		<td>Backspace</td>
+	</tr>
+	<tr>
+		<td>\f</td>
+		<td>Form feed</td>
+	</tr>
+	<tr>
+		<td>\n</td>
+		<td>New line</td>
+	</tr>
+	<tr>
+		<td>\r</td>
+		<td>Carriage return</td>
+	</tr>
+	<tr>
+		<td>\t</td>
+		<td>Tab</td>
+	</tr>
+	<tr>
+		<td>\v</td>
+		<td>Vertical Tab</td>
+	</tr>
+	<tr>
+		<td>\\</td>
+		<td>Backslash character (\)</td>
+	</tr>
+	<tr>
+		<td>\uXXXX</td>
+		<td>
+			The Unicode character specified by the fourth hexadecimal digit XXXX.<br>
+			\u00A9 is the sequence for the copyright symbol (&copy;)
+		</td>
+	</tr>
+</table>
+
+<h4>Escaping Characters</h4>
+
+TODO:
+https://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Core_Language_Features#Literals
+https://developer.mozilla.org/en/JavaScript/Guide/Predefined_Core_Objects
+https://developer.mozilla.org/en/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers
+

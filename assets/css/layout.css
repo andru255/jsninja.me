@@ -39,19 +39,22 @@ a{
 	display:inline-block;
 	margin:30px 20px;
 }
-.ui-badge:nth-child(odd){
+#ui-welcome .ui-badge{
+	text-align:center;
+}
+#ui-welcome .ui-badge:nth-child(odd){
 	transform:rotate(5deg);
 	-moz-transform:rotate(5deg);
 	-ms-transform:rotate(5deg);
 	-webkit-transform:rotate(5deg);
 }
-.ui-badge:nth-child(even){
+#ui-welcome .ui-badge:nth-child(even){
 	transform:rotate(-5deg);
 	-moz-transform:rotate(-5deg);
 	-ms-transform:rotate(-5deg);
 	-webkit-transform:rotate(-5deg);
 }
-.ui-badge:hover, .ui-badge:focus{
+#ui-welcome .ui-badge:hover, #ui-welcome .ui-badge:focus{
 	background:#ccaa99;
 	transform:rotate(0deg);
 	-moz-transform:rotate(0deg);

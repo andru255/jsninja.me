@@ -50,7 +50,9 @@ jsninjaMe.ninja.prototype = {
 
 		if(!message || !this._speechbubble) return;
 
-		this._speechbubble.innerText = message;
+		// won't work in Gecko when message contains a \n. Thanks Mozilla!
+		// this._speechbubble.innerText = message;
+		this._speechbubble.innerHTML = message.replace(/\n/,'<br>');
 
 		return this; // allows chaining
 

@@ -10,6 +10,9 @@
 	<script src="assets/js/ui.js"></script>
 	<script src="assets/js/ninja.js"></script>
 	<script src="assets/js/wizard.js"></script>
+	<style>
+	#ninja:hover{ opacity:0.5; }
+	</style>
 </head>
 <body>
 
@@ -45,7 +48,6 @@
 			Wanna see the plain <a href="dojo.html">HTML version of the dojo</a>?
 		</div>
 	</article>
-
 </div>
 
 <div class="ui-section" id="dojo">
@@ -66,12 +68,13 @@
 				<li><a href="#!dojo/basics/01-what-is-javascript">What is JavaScript?</a></li>
 				<li><a href="#!dojo/basics/02-variables">Variables</a></li>
 				<li><a href="#!dojo/basics/03-operators">Operators</a></li>
-				<li><a href="#!dojo/basics/04-data-types">Data Types</a></li>
+				<li><a href="#!dojo/basics/04-literals">Literals</a></li>
 				<li><a href="#!dojo/basics/05-comparisons">Comparisons</a></li>
 				<li><a href="#!dojo/basics/06-statements">Statements</a></li>
 				<li><a href="#!dojo/basics/07-functions">Functions</a></li>
-				<li><a href="#!dojo/basics/08-prototype">Prototype</a></li>
-				<li><a href="#!dojo/basics/09-scopes">Scopes</a></li>
+				<li><a href="#!dojo/basics/08-objects">Objects</a></li>
+				<li><a href="#!dojo/basics/09-prototype">Prototype</a></li>
+				<li><a href="#!dojo/basics/10-scopes">Scopes</a></li>
 			</ul>
 		</div>
 	</div>
@@ -106,7 +109,7 @@ wizard.init(0);
 document.getElementById('print-button').addEventListener('click', function(){
 	ui.print();
 	return false;
-});
+},true);
 
 //ui.bind('#ninja', 'click', function(event){
 //	wizard.start();

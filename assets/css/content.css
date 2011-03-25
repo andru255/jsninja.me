@@ -3,22 +3,33 @@
 	color:#222;
 	background:#fff;
 }
-.ui-content > h3{
-	margin:0 0 0.5em 0;
-}
-.ui-content > h4{
-	margin:2em 1em 1em 1em;
-}
+
+/* margins and paddings for text-read-flow */
 .ui-content > *{
 	margin:0.25em 1em;
 	padding:0;
+}
+.ui-content > h3{
+	margin:1em 0 0.5em 0;
+}
+.ui-content > h4{
+	margin:1em 1em 1em 0;
 }
 .ui-content > p{
 	margin:0.75em 1em;
 }
 
+.ui-content ol, .ui-content ul{
+	list-style-position:inside;
+}
+
 .ui-content h3{
 	color:#663300;
+	font-size:18px;
+}
+.ui-content h4{
+	color:#444;
+	font-size:18px;
 }
 
 .ui-content > pre{
@@ -57,6 +68,22 @@
 	color:#663300;
 	border-right:1px solid #444;
 	border-left:1px solid #444;
+}
+
+.ui-badge.ui-warning{
+	background:#eeaaaa;
+	text-align:left;
+	padding:3px 10px;
+	border-color:#bb3333;
+}
+
+.ui-badge.ui-warning h3{
+	color:#bb3333;
+	font-size:16px;
+}
+.ui-badge.ui-warning span{
+	color:#222;
+	font-size:13px;
 }
 
 .ui-content .justify{
